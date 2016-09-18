@@ -1,0 +1,46 @@
+<network>
+  <name>ovs-network</name>
+  <forward mode='bridge'/>
+  <bridge name='br-trunk'/>
+  <virtualport type='openvswitch'/>
+  <portgroup name='vlan-393' default='yes'>
+    <vlan>
+      <tag id='393'/>
+    </vlan>
+  </portgroup>
+  <portgroup name='vlan-394'>
+    <vlan>
+      <tag id='394'/>
+    </vlan>
+  </portgroup>
+  <portgroup name='vlan-395'>
+    <vlan>
+      <tag id='395'/>
+    </vlan>
+  </portgroup>
+  <portgroup name='vlan-11'>
+    <vlan>
+      <tag id='11'/>
+    </vlan>
+  </portgroup>
+  <portgroup name='vlan-12'>
+    <vlan>
+      <tag id='12'/>
+    </vlan>
+  </portgroup>
+  <portgroup name='vlan-13'>
+    <vlan>
+      <tag id='13'/>
+    </vlan>
+  </portgroup>
+  <portgroup name='vlan-all'>
+    <vlan trunk='yes'>
+      <tag id='393'/>
+      <tag id='394'/>
+      <tag id='395'/>
+      <tag id='11'/>
+      <tag id='12'/>
+      <tag id='13'/>
+    </vlan>
+  </portgroup>
+</network>
